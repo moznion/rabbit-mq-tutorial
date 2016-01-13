@@ -1,0 +1,5 @@
+rootProject.name = 'rabbitmq'
+include ':rabbitmq-hello-world'
+
+project(':rabbitmq-hello-world').projectDir = "$rootDir/hello-world" as File
+

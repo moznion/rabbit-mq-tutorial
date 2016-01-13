@@ -1,0 +1,27 @@
+allprojects {
+    apply plugin: 'idea'
+
+    group = 'net.moznion.rabbitmq'
+    version = '0.0.1'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    test {
+        return outputs.upToDateWhen { false } //makes it run every time even when Gradle thinks it is "Up-To-Date"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'com.rabbitmq:amqp-client:3.6.0'
+    }
+}
+

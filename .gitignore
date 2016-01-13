@@ -1,0 +1,17 @@
+/.classpath
+/.project
+/.settings/
+/target/
+/*.iml
+/.idea/
+/.checkstyle
+/*/target/
+/*/.classpath
+/*/.project
+/*/.settings/
+/.gradle/
+/build/
+/**/build/
+/**/*.iml
+/**/node_modules/
+/**/bower_components/
